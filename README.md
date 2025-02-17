@@ -10,6 +10,11 @@ must be registered in the configuration.  Our big issue comes with parsing conte
 where some versions don't always use a key="value" wrapper.  We wanted to specifically convert Divi into a Tailwind page, so
 this is our first go at it.
 
+I'll be including default components soon.  For the time being, to help with debugging, I recommend you extend
+your components from Crumbls\WordPressRenderer\View\Components\AbstractComponent instead of the default Component. It 
+will tell you any missing properties you need in your constructor.  If you want any help duplicating a WP shortcode
+into a Laravel View using AlpineJS and Tailwind 3, get ahold of me at wpsc@crumbls.com .
+
 ## Installation
 
 You can install the package via composer:
@@ -21,6 +26,7 @@ composer require crumbls/wordpress-renderer
 ## Usage
 
 ```php
+# Page can be a local model.  We recommend Corcel's Post model as a base.
 $record = Page::inRandomOrder()
             ->take(1)
             ->status('publish')
