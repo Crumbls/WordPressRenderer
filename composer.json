@@ -1,0 +1,34 @@
+{
+    "name": "crumbls/wordpress-shortcodes",
+    "description": "WordPress-style shortcodes for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Crumbls\\WordPressRenderer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Chase Miller",
+            "email": "chase@crumbls.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "orchestra/testbench": "^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Crumbls\\WordPressRenderer\\WordPressRendererServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
